@@ -264,3 +264,16 @@ a {
   .xl\:text-6xl { font-size: calc(60px*var(--app-text-scale,1)); }
 }
 
+/* ==========================================
+   手机端强制全屏适配 (解决 WebView 白屏和外框过大)
+   ========================================== */
+@media screen and (max-width: 768px) {
+  html, body {
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #ffffff !important; /* 去掉外面的灰色背景 */
+    overflow: hidden !important; /* 防止滚动条卡死 */
+  }
+}

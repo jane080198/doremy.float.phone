@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.FloatShell" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- 保留状态栏透明，但强制系统给网页留出避让空间 -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
+        
+        <!-- 这两行是解决 OPPO 遮挡/白屏的关键 -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:fitsSystemWindows">true</item>
     </style>
 </resources>

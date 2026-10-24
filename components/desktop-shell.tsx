@@ -4317,11 +4317,12 @@ html,body{margin:0;padding:0;width:100%;height:100%;background:#121110;color:rgb
         data-hide-top-bar={draftTheme.hideTopBar ? "1" : "0"}
       >
         {/* User's global custom CSS is injected via useEffect into document.head */}
-        <div className="phone-case">
-          <div className="phone-frame">
+        <div className="phone-case" style={{ display: 'contents' }}>
+          <div className="phone-frame" style={{ display: 'contents' }}>
             <div
               ref={shellRef}
               className={activeApp ? "phone-shell app-open-shell" : "phone-shell"}
+              style={{ width: '100vw', height: '100dvh', borderRadius: '0', border: 'none', boxShadow: 'none' }}
               data-ui="phone-screen"
               data-active-app={activeApp || ""}
               data-app={activeApp || ""}

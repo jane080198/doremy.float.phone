@@ -1458,3 +1458,35 @@
 .folder-dots .dot.active {
   background: color-mix(in srgb, var(--c-home-label, #ffffff) 85%, transparent);
 }
+
+@media screen and (max-width: 768px) {
+  /* 彻底干掉最外层的电脑桌面灰色背景 */
+  body, html {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* 找到包裹在最外面的外壳容器，强行拉满全屏，去掉边框和缩放 */
+  [class*="shell"], [class*="mockup"], [class*="device"], main {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important; /* 防止被缩放居中 */
+  }
+  
+  /* 确保内部内容可以正常滚动 */
+  #__next {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto !important;
+  }
+}

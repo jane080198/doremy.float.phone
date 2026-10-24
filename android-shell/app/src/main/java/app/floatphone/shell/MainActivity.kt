@@ -54,7 +54,7 @@ import java.io.FileOutputStream
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        val SITE_URL: String = "https://jane080828.netlify.app"
+        val SITE_URL: String = "https://jane080828.netlify.app/?mobile=1"
         const val VERSION = "1.0.10"
         /** 来电接听等场景的站内深链（必须以 SITE_URL 开头，否则忽略） */
         const val EXTRA_OPEN_URL = "open_url"

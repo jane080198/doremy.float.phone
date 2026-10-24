@@ -379,6 +379,9 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        webView.settings.useWideViewPort = true
+        webView.settings.loadWithOverviewMode = true//
+        
         // 冷启动带深链（如来电接听）直接加载目标；否则加载首页
         webView.loadUrl(consumeOpenUrl(intent) ?: SITE_URL)
         ensurePushService()
